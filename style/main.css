@@ -15,23 +15,23 @@ html, body{
 p,
 a,
 address{
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 2vw, 2rem);
 
 }
 
 h1{
-    font-size: 4rem;
+    font-size: clamp(2rem, 4vw, 4rem);
     padding-top: 10px;
 }
 
 h2{
-    font-size: 3.2rem;
+    font-size: clamp(1.5rem, 3.2vw, 3.2rem);
     margin-top: 0;
     padding-top: 10px;
 }
 
 h3{
-    font-size: 2.8rem;
+    font-size: clamp(1.2rem, 2.8vw, 2.8rem);
     margin-top: 0;
     padding-top: 10px;
 }
@@ -124,17 +124,35 @@ header p {
     gap: 2rem;
 }
 
-.main_conteiner img{
-    width: 40%;
+.main_conteiner picture {
+    width: 100%;
+    max-height: 500px;
+    display: flex;
+}
+
+
+.main_conteiner picture img{
+    width: 100%;
     height: auto;
 }
 
 .news{
     background-color: var(--primary-color);
+    text-align: center;
+    height: auto;
+    
+}
+
+.news ::-webkit-scrollbar {
+  display: none;
 }
 
 .news_conteiner{
+    max-height: 100%;
     text-align: center;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 
 .news img{
@@ -148,14 +166,18 @@ header p {
     display: flex;
     flex: 1;
     gap: 2rem;
+    min-width: 40%;
+    max-width: 90%;
+    height: 100%;
 }
 
 #news_conteiner .news_card{
     border: 2px solid var(--branco);
     padding-bottom: 1rem;
     border-radius: 2rem;
-    width: 30%;
-    overflow: hidden;
+    min-width: 40%;
+    max-height: 100%;
+    overflow: auto;
     transition: 0.3s ease;
 }
 
@@ -180,8 +202,13 @@ header p {
     gap: 2rem;
 }
 
-.contato img{
-    width: 40%;
+.contato picture{
+    width: 60%;
+    display: flex;
+}
+
+.contato picture img{
+    width: 100%;
     height: auto;
 }
 
@@ -204,9 +231,8 @@ header p {
 }
 
 #redes-sociais img{
-    width: 32px;
-    height: 32px;
-
+    width: clamp(1.25rem, 4vw, 3.2rem);
+    height: clamp(1.25rem, 4vw, 3.2rem);
 }
 
 #institucional a{
