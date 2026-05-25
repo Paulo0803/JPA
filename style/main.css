@@ -1,0 +1,243 @@
+/* "Gerais" ⬇️*/
+:root{
+    --primary-color: #8D35AA;
+    --secondary-color: #4B0082;
+    --branco: #fafafa
+}
+
+html, body{
+    /* font-size: 62.5%;
+    font-family: 'Bebas Neue', cursive;
+    font-weight: 400; */
+    font: 400 62.5% 'Bebas Neue', cursive;
+}
+
+p,
+a,
+address{
+    font-size: 2rem;
+
+}
+
+h1{
+    font-size: 4rem;
+    padding-top: 10px;
+}
+
+h2{
+    font-size: 3.2rem;
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+h3{
+    font-size: 2.8rem;
+    margin-top: 0;
+    padding-top: 10px;
+}
+
+.conteiner{
+    width: 80%;
+    margin: 0 auto;
+    padding: 1px;
+}
+
+.btn{
+    display: inline-block;
+    padding: .75em 1.5em;
+    border-radius: 16px;
+    text-decoration: none;
+    background-color: #000000;
+    border: 2px solid #000000;
+    color: var(--branco);
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover{
+    background-color: var(--secondary-color);
+}
+
+.btn a{
+    color: var(--branco);
+}
+
+.title{
+    padding-top: 7rem;
+}
+
+/* "Especificos" ⬇️*/
+
+header a,
+header p {
+    color: var(--branco);
+}
+
+#logoNome{
+    display: flex;
+    align-items: center;
+}
+#logoNome img{
+    width: 63px;
+    height: 63px;
+    margin-right: .5rem;
+}
+
+.hero{
+    background-color: #414141;
+}
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    
+}
+
+.nav ul{
+    display: flex;
+    gap: .5rem;
+    list-style-type: none;
+}
+
+.nav a{
+    padding: .75em;
+    border-radius: 4px;
+    text-decoration: none;
+    background-color: var(--primary-color);
+    transition: background-color 0.3s ease;
+}
+
+.nav a:hover{
+    background-color: var(--secondary-color);
+}
+
+.main{
+    background: linear-gradient(to bottom, var(--branco), var(--primary-color));
+
+}
+
+.main_conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.main_conteiner img{
+    width: 40%;
+    height: auto;
+}
+
+.news{
+    background-color: var(--primary-color);
+}
+
+.news_conteiner{
+    text-align: center;
+}
+
+.news img{
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 1rem;
+}
+
+#news_conteiner{
+    display: flex;
+    flex: 1;
+    gap: 2rem;
+}
+
+#news_conteiner .news_card{
+    border: 2px solid var(--branco);
+    padding-bottom: 1rem;
+    border-radius: 2rem;
+    width: 30%;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+#news_conteiner .news_card:hover{
+    border-color: var(--primary-color);
+    background-color: var(--branco);
+}
+
+.news_card p{
+    color: #2d2d2d
+}
+
+#contact{
+    background: linear-gradient(to top, var(--branco), var(--primary-color));
+    padding-bottom: 7rem;
+}
+
+.contato{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.contato img{
+    width: 40%;
+    height: auto;
+}
+
+.footer{
+    background-color: var(--primary-color);
+    border-top: 2px solid var(--primary-color);
+    padding: 2rem 0;
+    border-top: 2px solid #000000;
+}
+
+.footer .conteiner{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#redes-sociais{
+    display: flex;
+    gap: .7rem;
+}
+
+#redes-sociais img{
+    width: 32px;
+    height: 32px;
+
+}
+
+#institucional a{
+    text-decoration: none;
+    color: var(--branco);
+}
+
+#institucional h2{
+    font-size: 4rem;
+    text-align: center;
+}
+
+.institucional_links{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+}
+
+.institucional_content{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.institucional_links .direita{
+    text-align: right;
+    border-right: 2px solid var(--branco);
+    padding-right: 2rem;
+}
+
+.institucional_links .esquerda{
+    text-align: left;
+}
