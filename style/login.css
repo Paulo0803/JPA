@@ -1,0 +1,210 @@
+:root {
+    --primary-color: #8D35AA;
+    --secondary-color: #4B0082;
+    --branco: #fafafa;
+    --cinza: #2d2331;
+}
+
+html, body {
+    font: 400 62.5% 'Bebas Neue', cursive;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: var(--cinza);
+}
+
+p,
+a,
+label {
+    font-size: clamp(1.4rem, 2vw, 1.8rem);
+    color: var(--branco);
+}
+
+h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    margin: 0 0 1rem 0;
+    color: var(--branco);
+    text-align: center;
+}
+
+/* Estrutura da Página de Login */
+.login_page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, var(--cinza), var(--primary-color));
+    padding: 2rem;
+    box-sizing: border-box;
+}
+
+.login_conteiner {
+    width: 100%;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+/* Topo do Card */
+.login_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.back_link {
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.back_link:hover {
+    color: var(--primary-color);
+}
+
+#logoNome {
+    display: flex;
+    align-items: center;
+}
+
+#logoNome :hover{
+    cursor: default;
+}
+
+#logoNome img {
+    width: 45px;
+    height: 45px;
+    margin-right: .5rem;
+}
+
+/* O Card de Login */
+.login_card {
+    background-color: rgba(45, 35, 49, 0.85); /* Tom do seu cinza com transparência */
+    border: 2px solid var(--primary-color);
+    border-radius: 2rem;
+    padding: 3.5rem;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.subtitle {
+    text-align: center;
+    color: #bfa3cc;
+    margin-bottom: 3rem;
+}
+
+/* Formulário e Inputs */
+.login_form {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.input_group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.input_group label {
+    letter-spacing: 1px;
+}
+
+.input_group input {
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--primary-color);
+    border-radius: 1rem;
+    padding: 1.2rem;
+    color: var(--branco);
+    font-family: sans-serif; /* Fonte legível para preenchimento de dados */
+    font-size: 1.6rem;
+    outline: none;
+    transition: border-color 0.7s ease, box-shadow 0.7s ease;
+}
+
+.input_group input:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 10px rgba(75, 0, 130, 0.5);
+}
+
+/* Links secundários */
+.form_actions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.forgot_password {
+    font-size: 1.4rem;
+    text-decoration: none;
+    color: #bfa3cc;
+    transition: color 0.7s ease;
+}
+
+.forgot_password:hover {
+    color: var(--branco);
+}
+
+/* Botão de Enviar customizado a partir do seu padrão */
+.btn {
+    display: inline-block;
+    padding: .75em 1.5em;
+    border-radius: 16px;
+    text-decoration: none;
+    background-color: #000000;
+    border: 2px solid #000000;
+    color: var(--branco);
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: 0.7s ease;
+}
+
+.btn:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px 0px var(--secondary-color);
+    border-color: var(--secondary-color);
+}
+
+.btn_block {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Rodapé do Card */
+.login_footer {
+    margin-top: 3rem;
+    text-align: center;
+}
+
+.login_footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.7s ease;
+}
+
+.login_footer a:hover {
+    color: var(--secondary-color);
+}
+
+/* Classes para o efeito dinâmico de mostrar/esconder */
+.extra_field {
+    max-height: 200px; /* Altura máxima aproximada do campo */
+    opacity: 1;
+    transition: all 0.7s ease-in-out;
+    overflow: hidden;
+}
+
+.extra_field.hidden {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    pointer-events: none; /* Desativa interações enquanto invisível */
+}
+
+/* Ajuste sutil no espaçamento do formulário para acomodar os novos campos */
+.login_form {
+    transition: all 0.7s ease;
+}

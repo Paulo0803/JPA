@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JPA - Entrar</title>
+    <link rel="icon" href="./img/logo JPA.png">
+    <link rel="stylesheet" href="./style/normalize.css">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style/login.css">
+</head>
+<body>
+    <div class="login_page">
+        <section class="login_conteiner">
+            <div class="login_header">
+                <a href="./main.html" class="back_link">&larr; Voltar para a Home</a>
+                <div id="logoNome">
+                    <img src="./img/logo JPA.png" alt="Material roxo nos três estados da matéria">
+                    <p><strong>JPA - RPG</strong></p>
+                </div>
+            </div>
+
+            <div class="login_card" id="authCard">
+                <h1 id="formTitle">Acesse sua conta</h1>
+                <p class="subtitle" id="formSubtitle">Insira suas credenciais para entrar no HUB</p>
+
+                <form action="#" method="POST" class="login_form" id="authForm">
+                    <div class="input_group">
+                        <label for="email">E-mail</label>
+                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                    </div>
+
+                    <div class="input_group extra_field hidden">
+                        <label for="phone">Telefone</label>
+                        <input type="tel" id="phone" name="phone" placeholder="(16) 99999-9999">
+                    </div>
+
+                    <div class="input_group">
+                        <label for="password">Senha</label>
+                        <input type="password" id="password" name="password" placeholder="Sua senha" required>
+                    </div>
+
+                    <div class="input_group extra_field hidden">
+                        <label for="confirmPassword">Confirme a Senha</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Repita a senha">
+                    </div>
+
+                    <div class="form_actions" id="forgotPasswordGroup">
+                        <a href="#" class="forgot_password">Esqueceu a senha?</a>
+                    </div>
+
+                    <button type="submit" class="btn btn_block" id="submitBtn">Entrar</button>
+                </form>
+
+                <div class="login_footer">
+                    <p id="toggleText">Ainda não tem uma conta? <a href="#" id="toggleAuthLink">Cadastre-se aqui</a></p>
+                </div>
+            </div>
+
+    <script src="./src/login.js"></script>
+</body>
+</html>

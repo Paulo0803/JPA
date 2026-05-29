@@ -6,8 +6,6 @@
     <title>JPA</title>
     <link rel="icon" href="./img/logo JPA.png">
     <link rel="stylesheet" href="./style/normalize.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style/main.css">
 </head>
@@ -21,8 +19,8 @@
                 </div>
                 <nav class="nav">
                     <ul>
-                        <li><a href="#sobre">Cadastrar</a></li>
-                        <li><a href="#contact">Entrar</a></li>
+                        <li><a href="./login.html">Cadastrar</a></li>
+                        <li><a href="./login.html">Entrar</a></li>
                     </ul>
                 </nav>
             </header>
@@ -39,21 +37,29 @@
             <div class="main_content">
                 <h1>Bem-vindo ao HUB JPA</h1>
                 <p>Já pensou um hub de RPG, onde conseguiria alugar um lugar para suas sessões, ou onde conseguiria consultorias para mestres, até mesmo um mestre para aquela one-shot ou sessão que seu mestre não pode ir? Essa é a ideia principal da JPA ser um hub para auxiliar todo tipo de pessoa com tudo relacionado a RPG, cadastre e comece agora mesmo.</p>
-                <a href="#" class="btn">Cadastre-se!</a>
+                <a href="./login.html" class="btn">Cadastre-se!</a>
             </div>
         </section>
     </div>
 
     <div class="news">
         <h2 class="title">Novidades JPA</h2>
+        
+        <!-- Botões de Controle do Carrossel -->
+        <div class="carousel_controls">
+            <button id="prevBtn" class="carousel_btn">&larr;</button>
+            <button id="nextBtn" class="carousel_btn">&rarr;</button>
+        </div>
+
         <section class="conteiner news_conteiner">
-            <div id="news_conteiner">
+            <!-- Adicionamos a ID "news_slider" para controlar via JavaScript -->
+            <div id="news_conteiner" class="news_slider">
                 <article class="news_card">
                     <img src="./img/Fichas news.png" alt="Fichas de RPG">
                     <div>
                         <h3>Fichas modulares</h3>
                         <p>Implementamos o novo sistema de fichas modulares para jogadores.</p>
-                        <a href="#cadastro" class="btn">Acessar</a>
+                        <a href="./login.html" class="btn">Acessar</a>
                     </div>
                 </article>
                 <article class="news_card">
@@ -61,7 +67,7 @@
                     <div>
                         <h3>Controle de mestre [WIP]</h3>
                         <p>Um sistema onde o mestre consegue ver e alterar a fichas dos jogadores. [Ainda em desenvolvimento]</p>
-                        <a href="#cadastro" class="btn">Acessar</a>
+                        <a href="./login.html" class="btn">Acessar</a>
                     </div>
                 </article>
                 <article class="news_card">
@@ -69,47 +75,7 @@
                     <div>
                         <h3>Sistema de Homebrews [WIP]</h3>
                         <p>Você faz suas regras montando a campanha doo seru jeito. [Ainda em desenvolvimento]</p>
-                        <a href="#cadastro" class="btn">Acessar</a>
-                    </div>
-                </article>
-                <article class="news_card">
-                    <img src="./img/Homebrews news.png" alt="Sistema de Homebrews">
-                    <div>
-                        <h3>Sistema de Homebrews [WIP]</h3>
-                        <p>Você faz suas regras montando a campanha doo seru jeito. [Ainda em desenvolvimento]</p>
-                        <a href="#cadastro" class="btn">Acessar</a>
-                    </div>
-                </article>
-                <article class="news_card">
-                    <img src="./img/Homebrews news.png" alt="Sistema de Homebrews">
-                    <div>
-                        <h3>Sistema de Homebrews [WIP]</h3>
-                        <p>Você faz suas regras montando a campanha doo seru jeito. [Ainda em desenvolvimento]</p>
-                        <a href="#cadastro" class="btn">Acessar</a>
-                    </div>
-                </article>
-                <article class="news_card">
-                    <img src="./img/Homebrews news.png" alt="Sistema de Homebrews">
-                    <div>
-                        <h3>Sistema de Homebrews [WIP]</h3>
-                        <p>Você faz suas regras montando a campanha doo seru jeito. [Ainda em desenvolvimento]</p>
-                        <a href="#cadastro" class="btn">Acessar</a>
-                    </div>
-                </article>
-                <article class="news_card">
-                    <img src="./img/Homebrews news.png" alt="Sistema de Homebrews">
-                    <div>
-                        <h3>Sistema de Homebrews [WIP]</h3>
-                        <p>Você faz suas regras montando a campanha doo seru jeito. [Ainda em desenvolvimento]</p>
-                        <a href="#cadastro" class="btn">Acessar</a>
-                    </div>
-                </article>
-                <article class="news_card">
-                    <img src="./img/Homebrews news.png" alt="Sistema de Homebrews">
-                    <div>
-                        <h3>Sistema de Homebrews [WIP]</h3>
-                        <p>Você faz suas regras montando a campanha doo seru jeito. [Ainda em desenvolvimento]</p>
-                        <a href="#cadastro" class="btn">Acessar</a>
+                        <a href="./login.html" class="btn">Acessar</a>
                     </div>
                 </article>
             </div>
@@ -165,5 +131,6 @@
             </div>
         </section>
     </div>
+    <script src="./src/main.js"></script>
 </body>
 </html>

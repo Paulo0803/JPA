@@ -21,6 +21,10 @@ address{
 
 }
 
+address{
+    margin-bottom: 1.5rem;
+}
+
 h1{
     font-size: clamp(2rem, 4vw, 4rem);
     padding-top: 10px;
@@ -63,7 +67,6 @@ h3{
     transform: translateY(-5px);
     box-shadow: 0 10px 20px 0px var(--secondary-color);
     border-color: var(--secondary-color);
-    margin-top: .75em 1.5em;
 }
 
 .btn a{
@@ -153,16 +156,17 @@ header p {
     
 }
 
-.news ::-webkit-scrollbar {
-  display: none;
+.news_conteiner::-webkit-scrollbar {
+    display: none;
 }
 
-.news_conteiner{
-    max-height: 100%;
-    text-align: center;
-    overflow: auto;
+.news_conteiner {
+    max-width: 100%;
+    overflow-x: auto;
+    scroll-behavior: smooth;
     scrollbar-width: none;
     -ms-overflow-style: none;
+    padding: 2rem 0;
 }
 
 .news img{
@@ -172,23 +176,24 @@ header p {
     border-radius: 1rem;
 }
 
-#news_conteiner{
+#news_conteiner {
     display: flex;
-    flex: 1;
     gap: 2rem;
-    min-width: 40%;
-    max-width: 90%;
-    height: 100%;
+    width: max-content;
+    max-width: none;
 }
 
-#news_conteiner .news_card{
+#news_conteiner .news_card {
     border: 2px solid var(--cinza);
-    padding-bottom: 1rem;
+    padding: 0 0 2rem 0;
     border-radius: 2rem;
-    min-width: 40%;
-    max-height: 100%;
-    overflow: auto;
+    width: 300px;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     transition: 0.2s ease;
+    overflow: hidden;
 }
 
 #news_conteiner .news_card:hover{
@@ -198,6 +203,38 @@ header p {
 
 .news_card p, h3{
     color: var(--branco);
+}
+
+.news_card a{
+    align-self: bottom;
+}
+
+.carousel_controls {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.carousel_btn {
+    background-color: var(--cinza);
+    color: var(--branco);
+    border: 2px solid var(--branco);
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+.carousel_btn:hover {
+    background-color: var(--branco);
+    color: var(--secondary-color);
+    transform: scale(1.1);
 }
 
 #contact{
