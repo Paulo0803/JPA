@@ -2,7 +2,8 @@
 :root{
     --primary-color: #8D35AA;
     --secondary-color: #4B0082;
-    --branco: #fafafa
+    --branco: #fafafa;
+    --cinza: #2d2331;
 }
 
 html, body{
@@ -16,24 +17,28 @@ p,
 a,
 address{
     font-size: clamp(1.2rem, 2vw, 2rem);
+    color: var(--branco);
 
 }
 
 h1{
     font-size: clamp(2rem, 4vw, 4rem);
     padding-top: 10px;
+    color: var(--branco);
 }
 
 h2{
     font-size: clamp(1.5rem, 3.2vw, 3.2rem);
     margin-top: 0;
     padding-top: 10px;
+    color: var(--branco);
 }
 
 h3{
     font-size: clamp(1.2rem, 2.8vw, 2.8rem);
     margin-top: 0;
     padding-top: 10px;
+    color: var(--branco);
 }
 
 .conteiner{
@@ -50,11 +55,15 @@ h3{
     background-color: #000000;
     border: 2px solid #000000;
     color: var(--branco);
-    transition: background-color 0.3s ease;
+    transition: 0.2s ease;
 }
 
 .btn:hover{
     background-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px 0px var(--secondary-color);
+    border-color: var(--secondary-color);
+    margin-top: .75em 1.5em;
 }
 
 .btn a{
@@ -83,7 +92,7 @@ header p {
 }
 
 .hero{
-    background-color: #414141;
+    background-color: var(--cinza);
 }
 
 .header{
@@ -105,15 +114,16 @@ header p {
     border-radius: 4px;
     text-decoration: none;
     background-color: var(--primary-color);
-    transition: background-color 0.3s ease;
+    transition: background-color 0.2s ease;
 }
 
 .nav a:hover{
     background-color: var(--secondary-color);
+    box-shadow: 0 10px 20px 0px var(--secondary-color);
 }
 
 .main{
-    background: linear-gradient(to bottom, var(--branco), var(--primary-color));
+    background: linear-gradient(to bottom, var(--cinza), var(--primary-color));
 
 }
 
@@ -172,26 +182,26 @@ header p {
 }
 
 #news_conteiner .news_card{
-    border: 2px solid var(--branco);
+    border: 2px solid var(--cinza);
     padding-bottom: 1rem;
     border-radius: 2rem;
     min-width: 40%;
     max-height: 100%;
     overflow: auto;
-    transition: 0.3s ease;
+    transition: 0.2s ease;
 }
 
 #news_conteiner .news_card:hover{
     border-color: var(--primary-color);
-    background-color: var(--branco);
+    background-color: var(--cinza);
 }
 
-.news_card p{
-    color: #2d2d2d
+.news_card p, h3{
+    color: var(--branco);
 }
 
 #contact{
-    background: linear-gradient(to top, var(--branco), var(--primary-color));
+    background: linear-gradient(to top, var(--cinza), var(--primary-color));
     padding-bottom: 7rem;
 }
 
@@ -228,16 +238,39 @@ header p {
 #redes-sociais{
     display: flex;
     gap: .7rem;
+    transition: 0.2s ease;
+}
+
+#redes-sociais a{
+    color: var(--cinza);
+    transition: 0.2s ease;
+}
+
+#redes-sociais a:hover{
+    transform: translateY(-5px);
+    color: var(--secondary-color);
 }
 
 #redes-sociais img{
     width: clamp(1.25rem, 4vw, 3.2rem);
     height: clamp(1.25rem, 4vw, 3.2rem);
+    transition: 0.2s ease;
+}
+
+#redes-sociais a:hover img{
+    filter: drop-shadow(0 0 5px var(--branco));
+    transform: scale(1.1) translateY(-5px);
 }
 
 #institucional a{
     text-decoration: none;
+    color: var(--cinza);
+    transition: 0.2s ease;
+}
+
+#institucional a:hover{
     color: var(--branco);
+    transform: translateY(-5px);
 }
 
 #institucional h2{
@@ -252,6 +285,11 @@ header p {
     align-items: center;
 }
 
+.institucional_links a:hover{
+    color: var(--branco);
+    transform: translateY(-5px);
+}
+
 .institucional_content{
     display: flex;
     flex-direction: column;
@@ -260,7 +298,7 @@ header p {
 
 .institucional_links .direita{
     text-align: right;
-    border-right: 2px solid var(--branco);
+    border-right: 2px solid var(--cinza);
     padding-right: 2rem;
 }
 
