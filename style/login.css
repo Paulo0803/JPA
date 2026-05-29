@@ -204,6 +204,22 @@ h1 {
     pointer-events: none; /* Desativa interações enquanto invisível */
 }
 
+.password_group {
+    max-height: 200px; /* Altura máxima aproximada do campo */
+    opacity: 1;
+    transition: all 0.7s ease-in-out;
+    overflow: hidden;
+}
+
+.password_group.hidden {
+    max-height: 0;
+    opacity: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin: 0;
+    pointer-events: none; /* Desativa interações enquanto invisível */
+}
+
 /* Ajuste sutil no espaçamento do formulário para acomodar os novos campos */
 .login_form {
     transition: all 0.7s ease;

@@ -1,15 +1,47 @@
-const toggleLink = document.getElementById('toggleAuthLink');
+const toggleSingUp = document.getElementById('toggleAuthLink');
+const toggleForgot = document.getElementById('toggleForgotLink');
 const formTitle = document.getElementById('formTitle');
 const formSubtitle = document.getElementById('formSubtitle');
 const submitBtn = document.getElementById('submitBtn');
 const forgotPasswordGroup = document.getElementById('forgotPasswordGroup');
+const toggleSingUpGroup = document.getElementById('toggleText');
 const toggleText = document.getElementById('toggleText');
 const extraFields = document.querySelectorAll('.extra_field');
+const passwordGroup = document.querySelectorAll('.password_group');
 
 const phoneInput = document.getElementById('phone');
 const confirmPasswordInput = document.getElementById('confirmPassword');
 
 let isSignUpMode = false;
+let isForgotMode = false;
+
+function toggleForgotMode(e) {
+    e.preventDefault();
+
+    isForgotMode = !isForgotMode;
+
+    if (isForgotMode) {
+        formTitle.textContent = "Recupere sua senha";
+        formSubtitle.textContent = "Insira seu e-mail para receber as instruções de recuperação";
+        submitBtn.textContent = "Enviar";
+
+        toggleSingUpGroup.style.display = "none";
+        
+        passwordGroup.forEach(field => field.classList.add('hidden'));
+    }
+    
+    else {
+        formTitle.textContent = "Acesse sua conta";
+        formSubtitle.textContent = "Insira suas credenciais para entrar no HUB";
+        submitBtn.textContent = "Entrar";
+
+        toggleSingUpGroup.style.display = "flex";
+        
+        passwordGroup.forEach(field => field.classList.remove('hidden'));
+    }
+}
+
+toggleForgot.addEventListener('click', toggleForgotMode);
 
 function toggleAuthMode(e) {
     e.preventDefault();
@@ -24,7 +56,7 @@ function toggleAuthMode(e) {
         forgotPasswordGroup.style.display = "none";
         
         toggleText.childNodes[0].textContent = "Já tem uma conta? ";
-        toggleLink.textContent = "Faça login aqui";
+        toggleSingUp.textContent = "Faça login aqui";
 
         extraFields.forEach(field => field.classList.remove('hidden'));
 
@@ -39,7 +71,7 @@ function toggleAuthMode(e) {
         forgotPasswordGroup.style.display = "flex";
 
         toggleText.childNodes[0].textContent = "Ainda não tem uma conta? ";
-        toggleLink.textContent = "Cadastre-se aqui";
+        toggleSingUp.textContent = "Cadastre-se aqui";
 
         extraFields.forEach(field => field.classList.add('hidden'));
 
@@ -48,4 +80,4 @@ function toggleAuthMode(e) {
     }
 }
 
-toggleLink.addEventListener('click', toggleAuthMode);
+toggleSingUp.addEventListener('click', toggleAuthMode);

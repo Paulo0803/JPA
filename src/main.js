@@ -1,5 +1,3 @@
-
-
 /*Inicio carrosel de noticias*/
 
 const slider = document.querySelector('.news_conteiner');
